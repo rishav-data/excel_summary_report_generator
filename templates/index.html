@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #80EF80;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #E3F0A3;
+            border: 2px solid #42D67A;
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #42D67A;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 15px;
+            text-align: left;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .description h3 {
+            color: #42D67A;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+            background-color: #BADBA2;
+            border: 1px solid #42D67A;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #42D67A;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2cb85e;
+        }
+
+        @media (max-width: 600px) {
+            .description {
+                font-size: 14px;
+            }
+
+            button, input[type="file"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📄 App Description</h2>
+        <div class="description">
+            <strong>Excel Report Generator Web App</strong><br>
+            Developed by <strong>Rishav Dhara</strong> | Date: <strong>July 2025</strong><br><br>
+
+            This is a lightweight, browser-based tool that allows users to upload Excel, CSV, or JSON data files, automatically analyzes the dataset, generates summary statistics, and creates data visualizations. It then compiles everything into a PDF report that the user can download.
+
+            <h3>✨ Features:</h3>
+            <ul>
+                <li>📂 Upload <code>.xlsx</code>, <code>.xls</code>, <code>.csv</code>, or <code>.json</code> files</li>
+                <li>📄 Choose sheets (for Excel files with multiple tabs)</li>
+                <li>📊 Automatically detects numeric vs categorical columns</li>
+                <li>📈 Generates:
+                    <ul>
+                        <li>Pairwise scatterplots (numeric)</li>
+                        <li>Histograms (numeric)</li>
+                        <li>Count plots (categorical)</li>
+                    </ul>
+                </li>
+                <li>📑 Generates summary statistics for all columns</li>
+                <li>📥 Exports all charts + summaries into a PDF report</li>
+                <li>💻 Runs locally in your browser via a Flask web app</li>
+            </ul>
+
+            <h3>🔧 Tech Stack:</h3>
+            <ul>
+                <li>Python (Flask, Pandas, Matplotlib, Seaborn)</li>
+                <li>FPDF for PDF generation</li>
+                <li>HTML/CSS for front-end interface</li>
+            </ul>
+
+            <h3>📌 Where to Use This:</h3>
+            <ul>
+                <li>For data analysts who need quick summaries</li>
+                <li>For generating client reports</li>
+                <li>For students submitting EDA assignments</li>
+                <li>For teams who want to automate early data profiling</li>
+            </ul>
+        </div>
+
+        <h2>📁 Upload Data File</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv,.xlsx,.xls,.json" required>
+            <br>
+            <button type="submit">Upload & Generate Report</button>
+        </form>
+    </div>
+</body>
+</html>

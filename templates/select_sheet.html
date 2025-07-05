@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Excel Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #80EF80;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #E3F0A3;
+            border: 2px solid #42D67A;
+            border-radius: 12px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h3 {
+            color: #42D67A;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid #42D67A;
+            border-radius: 6px;
+            background-color: #BADBA2;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #42D67A;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2cb85e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Select a Sheet to Generate Report</h3>
+        <form action="/generate" method="get">
+            <input type="hidden" name="file" value="{{ file }}">
+            <select name="sheet" required>
+                {% for sheet in sheets %}
+                    <option value="{{ loop.index0 }}">{{ sheet }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button type="submit">Generate Report</button>
+        </form>
+    </div>
+</body>
+</html>
