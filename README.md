@@ -15,6 +15,7 @@ This is a lightweight web application for generating automated PDF reports from 
 - 📁 Upload `.xlsx`, `.xls`, `.csv`, or `.json` files
   <img width="1941" height="1097" alt="uploadpart" src="https://github.com/user-attachments/assets/abfeca80-2cd8-47e0-9138-e9a52ff54a83" />
 - 📄 Choose a sheet from Excel files (if applicable)
+  ......
   <img width="402" height="290" alt="exlsheet" src="https://github.com/user-attachments/assets/9d269967-ff57-4ce7-8be5-056eccdc2433" />
 - 📊 Automatically summarizes data
   <img width="1582" height="737" alt="resuly1" src="https://github.com/user-attachments/assets/ce63ed32-e216-4326-a87d-6838dddfb114" />
