@@ -49,18 +49,5 @@ This is a lightweight web application for generating automated PDF reports from 
 
 ---
 ## 🌉 Structure
+<img width="582" height="348" alt="Screenshot 2025-07-25 122224" src="https://github.com/user-attachments/assets/23f12dc3-35f7-4f60-8ca1-4f2234519362" />
 
-report_generator/
-├── templates/
-│   └── index.html             # Web UI
-│   └── select_sheet.html               
-├── app.py  
-├── main.py                  # Main script: orchestrates the process
-├── file_loader.py           # Reads Excel/CSV/JSON into DataFrame
-├── analyzer.py              # Performs summarization/cleaning
-├── visualizer.py            # Generates charts and saves images
-├── pdf_generator.py         # Combines text + charts into PDF
-├── sample_files/            # Test files (CSV, Excel, JSON)
-├── output_reports/          # Generated PDF reports
-├──run_report_generator.bash #Double click to deploy Flask app
-└── requirements.txt         # Required Python packages
